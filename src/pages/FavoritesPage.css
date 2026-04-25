@@ -1,0 +1,181 @@
+.favorites-page {
+  padding-top: calc(var(--navbar-height) + var(--space-2xl));
+  padding-bottom: var(--space-3xl);
+}
+
+.favorites-page__header {
+  margin-bottom: var(--space-2xl);
+}
+.favorites-page__heading-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+.favorites-page__icon {
+  color: var(--color-accent);
+  filter: drop-shadow(0 0 8px rgba(229, 9, 20, 0.4));
+}
+.favorites-page__heading {
+  font-size: var(--font-size-4xl);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.favorites-page__sub {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+}
+
+/* Empty state */
+.favorites-page__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+}
+.favorites-page__empty-icon {
+  font-size: 5rem;
+  margin-bottom: var(--space-xl);
+  filter: grayscale(0.4);
+}
+.favorites-page__empty-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+}
+.favorites-page__empty-sub {
+  color: var(--color-text-muted);
+  max-width: 400px;
+}
+
+/* Favorites Grid */
+.favorites-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* Fav Card */
+.fav-card {
+  display: flex;
+  gap: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+.fav-card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.fav-card__link {
+  flex-shrink: 0;
+  width: 110px;
+}
+.fav-card__poster-wrap {
+  position: relative;
+  width: 110px;
+  height: 100%;
+  overflow: hidden;
+}
+.fav-card__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+.fav-card__poster--fallback {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+.fav-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,11,15,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+.fav-card:hover .fav-card__overlay { opacity: 1; }
+.fav-card:hover .fav-card__poster { transform: scale(1.06); }
+
+.fav-card__info {
+  flex: 1;
+  padding: var(--space-lg) var(--space-lg) var(--space-lg) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+.fav-card__info-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.fav-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-text-primary);
+  transition: color var(--transition-fast);
+}
+.fav-card__title:hover {
+  color: var(--color-gold);
+}
+.fav-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+.fav-card__year {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+.fav-card__overview {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.fav-card__remove {
+  align-self: flex-start;
+  margin-top: var(--space-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  transition: color var(--transition-base);
+}
+.fav-card__remove:hover {
+  color: var(--color-accent);
+  border-color: rgba(229,9,20,0.3);
+}
+
+@media (max-width: 768px) {
+  .favorites-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,87 @@
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-card) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    var(--color-bg-card) 100%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s infinite linear;
+  border-radius: var(--radius-md);
+}
+
+/* Skeleton Card */
+.skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.skeleton-card__poster {
+  aspect-ratio: 2/3;
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+.skeleton-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: 0 var(--space-xs);
+}
+.skeleton-card__title {
+  height: 14px;
+  width: 85%;
+  border-radius: var(--radius-sm);
+}
+.skeleton-card__year {
+  height: 10px;
+  width: 40%;
+  border-radius: var(--radius-sm);
+}
+
+/* Skeleton Hero */
+.skeleton-hero {
+  width: 100%;
+  height: 90vh;
+  border-radius: 0;
+}
+
+/* Skeleton Detail */
+.skeleton-detail__backdrop {
+  width: 100%;
+  height: 55vh;
+  border-radius: 0;
+}
+.skeleton-detail__content {
+  display: flex;
+  gap: var(--space-2xl);
+  margin-top: -120px;
+  position: relative;
+}
+.skeleton-detail__poster {
+  width: 260px;
+  min-width: 260px;
+  aspect-ratio: 2/3;
+  border-radius: var(--radius-lg);
+}
+.skeleton-detail__info {
+  flex: 1;
+  padding-top: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.skeleton-detail__title {
+  height: 40px;
+  width: 70%;
+  border-radius: var(--radius-md);
+}
+.skeleton-detail__meta {
+  height: 20px;
+  width: 50%;
+  border-radius: var(--radius-sm);
+}
+.skeleton-detail__overview {
+  height: 14px;
+  width: 100%;
+  border-radius: var(--radius-sm);
+}

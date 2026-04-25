@@ -1,0 +1,23 @@
+# Movie App — Task Checklist
+
+- [/] Scaffold Vite + React + TypeScript project
+- [ ] Install dependencies (React Router, TanStack Query, Lucide React)
+- [ ] Create TypeScript types for TMDB
+- [ ] Create TMDB API client
+- [ ] Set up global CSS design system (tokens, animations)
+- [ ] Build Navbar component
+- [ ] Build MovieCard component
+- [ ] Build SkeletonLoader component
+- [ ] Build HeroBanner component
+- [ ] Build MovieCarousel component
+- [ ] Build SearchBar component
+- [ ] Build GenreFilter component
+- [ ] Create FavoritesContext
+- [ ] Create custom hooks (useMovies, useDebounce)
+- [ ] Build HomePage
+- [ ] Build SearchPage
+- [ ] Build MovieDetailPage
+- [ ] Build FavoritesPage
+- [ ] Set up React Router in App.tsx
+- [ ] Add .env with TMDB placeholder
+- [ ] Final verification (build check)
