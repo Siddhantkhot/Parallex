@@ -6,7 +6,7 @@ import { getPosterUrl } from '../api/tmdb';
 import './FavoritesPage.css';
 
 const FavoritesPage: React.FC = () => {
-  const { favorites, removeFavorite, toggleFavorite } = useFavorites();
+  const { favorites, removeFavorite } = useFavorites();
 
   return (
     <main className="page favorites-page">
