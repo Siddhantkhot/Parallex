@@ -37,7 +37,6 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ movies, isLoading }) => {
   if (featured.length === 0) return null;
 
   const movie = featured[currentIndex];
-  const backdropUrl = getBackdropUrl(movie.backdrop_path);
   const year = movie.release_date ? new Date(movie.release_date).getFullYear() : '';
   const rating = movie.vote_average.toFixed(1);
 
