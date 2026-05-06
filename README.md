@@ -1,5 +1,5 @@
 # Parallex — Movie App Walkthrough
-live site : [(https://parallex-5l8lom22j-khotsiddhant108-5389s-projects.vercel.app/)]
+live site : [(https://parallex-beige.vercel.app/)]
 A cinematic movie discovery app built with React 18 + TypeScript + Vite.
 
 ---
